@@ -7,8 +7,8 @@
     <input type="text" name="prenom" id="prenom"><br>
     <SELECT name="genre" size="1">
     <OPTION>M.
-    <OPTION>Md.
-    <OPTION>Mdlle
+    <OPTION>Mme.
+    <OPTION>Mlle
     </SELECT>
     <label for="nom">Nom</label><br>
     <input type="text" name="nom" id="nom"><br>

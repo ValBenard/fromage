@@ -78,15 +78,16 @@ class EmployeController {
         if (isset($_POST['submit'])) {
             $upd = $this->employes->edit($_POST,$_GET['id']);
 
-            if ($del) {
+            if ($upd) {
                 $msg = "L'employé ". $_GET['id']." a été modifié.";
             } 
             else {
-                $msg = "Impossible de modifier l'employé!";
+                $msg = "Impossible de modifier l'employé!". $_GET['id'];
             }
             $this->index($msg); // Redirection vers l'index
         }
-    	include 'view/employe/edit.php';
+        $employe = $this->employes->getEmploye($_GET['id']);
+        include 'view/employe/edit.php';
     
     }
 

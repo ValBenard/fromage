@@ -25,9 +25,9 @@ class employe extends ConnexionDB  {
 	public function edit($empl,$id)
 	{
 		$sql = $this->cnx->prepare("UPDATE employes 
-                                    SET prenom=?,nom=?,email=?,age=?,ville=?,genre=?,username=?,mdp=?,typec=?
+                                    SET prenom=?,nom=?,email=?,age=?,ville=?,genre=?,username=?,mdp=?
                                     WHERE id=?");
-        $sql->execute( array($empl['prenom'],$empl['nom'],$empl['email'],$empl['age'],$empl['ville'],$empl['genre'],$empl['username'],$empl['mdp'],$empl['typec'],$id) );
+        $sql->execute( array($empl['prenom'],$empl['nom'],$empl['email'],$empl['age'],$empl['ville'],$empl['genre'],$empl['username'],$empl['mdp'],$id) );
 		return $sql->rowCount();
 	}
 
