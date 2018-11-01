@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "templates/header.php";?>
 
 <h2>Afficher <?php echo $employe['nom']; ?></h2>
@@ -27,6 +28,14 @@
 		<tr>
 			<td>Ville</td>
 			<td><a href="https://www.google.com/maps?q=<?php echo $employe['ville']; ?>"><?php echo $employe['ville']; ?></a></td>
+		</tr>
+		<tr>
+		<td>Type</td>
+		<td><?php 
+			if ($employe['type_compte']==2) {echo "Super Admin";}
+			else if ($employe['type_compte']==1) {echo "Admin";}
+			else {echo "Basique";							}
+		?></td>
 		</tr>
 	</tbody>
 </table>

@@ -34,3 +34,5 @@ if (file_exists($c_path)) {
 } else {
 	die('Page non trouvée 404');
 }
+
+

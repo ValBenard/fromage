@@ -1,3 +1,10 @@
+<?php
+// if (empty($_SESSION)){
+// 	session_start();
+//     //header ('Location: ?ctrl=employe&mth=login');
+//     //exit();
+// }
+?>
 <!doctype html>
 <html lang="fr">
 
